@@ -1,0 +1,100 @@
+.header-main{
+    border: none !important;
+    padding: 80px 0px 90px 0px;
+}
+
+.header-main .header-content{
+    width: 50%;
+    margin: auto;
+}
+
+.header-main .header-content .title{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--paragraph-color);
+    margin-top: 30px;
+}
+
+.sub-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--light-para-color);
+    margin-top: 10px;
+   
+  }
+  
+.header-main .header-content .btn{
+    margin-top: 30px;
+    padding: 10px 50px;
+}
+
+.header-main .header-content .social-btn-set {
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100% !important;
+    background: var(--text-color);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: .6s;
+    box-shadow: var(--primary-color);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.social-btn a:hover {
+    color: white;
+}
+
+.social-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: 1s;
+    background: var(--primary-color);
+    color: white;
+}
+
+.social-btn:hover::before {
+    width: 100%;
+    border: 2px solid var(--primary-color);
+}
+
+@media (max-width: 1200px) {
+    .header-main .header-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 578px) {
+    .header-main .header-content .title {
+        font-size: 25px;
+    }
+
+    .sub-title {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--light-para-color);
+        margin-top: 10px;
+    }
+}

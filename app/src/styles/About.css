@@ -1,0 +1,29 @@
+.about-main {
+    padding: 50px 150px;
+    background-color: #f9f9f9;
+    transform: translateY(100px);
+    margin-top: 100px;
+}
+
+.about-main .main-title {
+    margin-bottom: 30px;
+}
+
+.about-main .para {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--light-para-color);
+    text-align: justify;
+}
+
+@media (max-width: 800px) {
+    .about-main {
+        padding: 50px 50px;
+    }
+}
+
+@media (max-width: 578px) {
+    .about-main .para {
+        font-size: 14px;
+    }
+}

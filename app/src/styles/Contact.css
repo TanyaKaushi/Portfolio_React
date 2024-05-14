@@ -1,0 +1,32 @@
+.contact-main{
+    padding: 50px 150px;
+    background-color: #f9f9f9;
+    margin-top: 150px;
+}
+
+.contact-main .contact-btn-set{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.all-right-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    align-items: center;
+    
+}
+
+.all-right-row .all-right{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--light-para-color);
+}
+
+@media (max-width: 990px) {
+    .contact-main {
+        padding: 50px 50px;
+    }
+}

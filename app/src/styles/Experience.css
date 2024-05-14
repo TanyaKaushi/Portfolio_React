@@ -1,0 +1,98 @@
+.experience-main{
+    padding: 50px 150px;
+    margin-top: 100px;
+}
+
+.experience-main .card-set{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.experience-main .card{
+    padding: 30px;
+    border: none;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+}
+
+.experience-main .card .title{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--paragraph-color);
+    margin-bottom: 10px;
+}
+
+.experience-main .card .company{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--paragraph-color);
+}
+
+.experience-main .card .time-period{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--light-para-color);
+}
+
+.experience-main .link{
+    font-size: 15px;
+    font-weight: 500;
+    font-weight: 600;
+    color: rgb(76, 76, 234);
+}
+
+.experience-main .link:hover{
+    color: rgb(89, 89, 251);
+    text-decoration: underline;
+}
+
+.experience-main .card .para{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--light-para-color);
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.experience-main .card .para li{
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+
+    .experience-main {
+        padding: 0px 50px;
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 990px) {
+    .experience-main .card-set {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 578px) {
+    .experience-main {
+        padding: 0px 30px;
+        margin-top: 200px;
+    }
+
+    .experience-main .card .title {
+        font-size: 18px;
+    }
+
+    .experience-main .card .company {
+        font-size: 14px;
+    }
+
+    .experience-main .card .time-period {
+        font-size: 12px;
+    }
+
+    .experience-main .card .para {
+        font-size: 14px;
+    }
+}

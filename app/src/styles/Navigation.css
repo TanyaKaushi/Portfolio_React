@@ -1,0 +1,71 @@
+.navbar-main {}
+
+.nav-fixed {
+    width: 100%;
+    position: fixed;
+    transition: 0.3s ease-in-out;
+}
+
+/* css to the navbar when scroll */
+.nav-active {
+    background-color: rgba(250, 250, 250, 0.725);
+    box-shadow: 5px -1px 12px -5px rgb(105, 105, 105);
+}
+
+.navbar-main .title {
+    font-size: 25px;
+    font-weight: 700;
+    background: var(--primary-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.navbar-main .subtitle-set {
+    color: var(-text-color);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.navbar-main .subtitle-set .sub-title {
+    font-weight: 600;
+}
+
+.navbar-main .subtitle-set .sub-title:hover {
+    background: var(--primary-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    cursor: pointer;
+}
+
+.navbar-main .btn {
+    padding: 10px 40px;
+    font-size: 15px;
+}
+
+@media (max-width:990px) {
+    .navbar-main .subtitle-set {
+        gap: 10px;
+    }
+    
+}
+
+@media (max-width:578px) {
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+        padding: 0px 30px;
+    }
+
+    .navbar-main .subtitle-set {
+        font-size: 1px;
+    }
+
+    .navbar-main .title {
+        font-size: 18px;
+    }
+    
+    .navbar-toggler-icon {
+        font-size: 12px !important;
+    }
+}
