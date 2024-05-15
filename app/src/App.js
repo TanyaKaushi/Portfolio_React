@@ -17,7 +17,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false)
-    }, 1000);
+    }, 3000);
   }, [])
 
   return (
@@ -31,7 +31,6 @@ function App() {
             size={10}
             aria-label="Loading Spinner"
             data-testid="loader"
-
           />
         </div>
 

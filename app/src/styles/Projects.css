@@ -23,6 +23,7 @@
     position: relative;
     border-radius: 10px;
     border: 1px solid rgb(204, 204, 204);
+    width: 100%;
 }
 
 .overlay {
@@ -131,7 +132,7 @@
 
 @media (max-width: 578px) {
     .projects-main {
-        padding: 0px 30px;
+        padding: 0px 0px;
     }
 
     .projects-main .card {

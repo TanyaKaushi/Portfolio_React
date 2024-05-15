@@ -29,4 +29,42 @@
     .contact-main {
         padding: 50px 50px;
     }
+
+    .all-right-row .all-right {
+        font-size: 11px;
+    }
+
+     .all-right-row {
+        padding: 20px 30px;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .all-right-row .social-btn {
+        width: 30px;
+        height: 30px;
+    }
+   
+}
+
+@media (max-width: 478px) {
+    .all-right-row .social-btn {
+        width:32px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 378px) {
+    .all-right-row .social-btn {
+        width: 40px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 358px) {
+    .all-right-row .social-btn {
+        width: 50px;
+        height: 30px;
+    }
 }
