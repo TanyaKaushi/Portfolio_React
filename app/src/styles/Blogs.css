@@ -1,6 +1,3 @@
-.blogs-main{
-    padding: 0px 150px;
-}
 
 .blogs-main .card-set{
     display: grid;
@@ -9,12 +6,16 @@
 }
 
 .blogs-main .card{
-    height: 25rem;
+    height: 100%;
+    padding: 30px;
 }
 
-.blogs-main .image{
-    margin: auto;
+.blogs-main .blog-image{
     text-align: center;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    width: 100%;
 }
 
 .blogs-main .title{
@@ -27,11 +28,6 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 1200px) {
-    .blogs-main {
-        padding: 0px 50px;
-    }
-}
 
 @media (max-width: 990px) {
     .blogs-main .card-set {
@@ -45,8 +41,3 @@
     }
 }
 
-@media (max-width: 578px) {
-    .blogs-main {
-        padding: 0px 30px;
-    }
-}

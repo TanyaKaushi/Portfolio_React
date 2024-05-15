@@ -13,7 +13,7 @@
 .projects-main .card{
     padding: 20px;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
     border: none;
     cursor: pointer;
     position: relative;
@@ -24,6 +24,7 @@
     border-radius: 10px;
     border: 1px solid rgb(204, 204, 204);
     width: 100%;
+    height: 170px;
 }
 
 .overlay {
@@ -60,6 +61,7 @@
     font-size: 14px;
     color: var(--light-para-color);
     font-weight: 500;
+    margin-top: 5px;
 }
 
 .projects-main .button-set{
@@ -70,7 +72,7 @@
 
 .projects-main .language-card{
     margin-top: 20px;
-    background: #f9f9f9;
+    background: #f8f8f8;
     opacity: 0;
 }
 
@@ -85,7 +87,7 @@
     align-items: center;
 }
 
-.projects-main .language-card .image{
+.projects-main .language-card .lan-image{
     width: 30px;
     border: none;
     margin: 0px 10px;
@@ -116,8 +118,14 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .projects-main .card .image{
+        width: 100%;
+        height: 100%;
+    }
+
+    
     .projects-main .card {
-        padding: 30px 10px;
+        padding: 30px;
         text-align: center;
         margin: auto;
         display: flex;
@@ -139,4 +147,15 @@
         padding: 20px 20px;
     }
 
+    .projects-main .card .title {
+        font-size: 16px;
+    }
+
+    .projects-main .card .para {
+        font-size: 13px;
+    }
+
+    .projects-main .card-set {
+        padding: 0px 30px;
+    }
 }

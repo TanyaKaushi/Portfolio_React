@@ -13,7 +13,7 @@
 .experience-main .card{
     padding: 30px;
     border: none;
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
     border-radius: 20px;
 }
 
@@ -40,11 +40,11 @@
     font-size: 15px;
     font-weight: 500;
     font-weight: 600;
-    color: rgb(76, 76, 234);
+    color: rgb(139, 139, 245);
 }
 
 .experience-main .link:hover{
-    color: rgb(89, 89, 251);
+    color: rgb(139, 139, 245);
     text-decoration: underline;
 }
 
@@ -52,7 +52,7 @@
     font-size: 15px;
     font-weight: 500;
     color: var(--light-para-color);
-    text-align: justify;
+    text-align: left;
     margin-top: 20px;
 }
 

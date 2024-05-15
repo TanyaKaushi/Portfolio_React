@@ -9,7 +9,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <section id="contact">
       <motion.div
         variants={fadeIn("up", 0.2)}
         initial="hidden"
@@ -53,7 +53,7 @@ const Contact = () => {
           <i class="bi bi-arrow-up-circle-fill"></i>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

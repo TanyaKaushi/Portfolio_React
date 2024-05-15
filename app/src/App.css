@@ -94,6 +94,10 @@ a:active {
     color: inherit;
 }
 
+ul, li {
+    list-style-type: none;
+  }
+
 /* parallax----------------------------------------------------------- */
 
 .scroll-scale {

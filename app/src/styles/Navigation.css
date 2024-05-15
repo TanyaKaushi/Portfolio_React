@@ -1,4 +1,6 @@
-.navbar-main {}
+.navbar-main {
+    
+}
 
 .nav-fixed {
     width: 100%;
@@ -18,6 +20,7 @@
     background: var(--primary-color);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    cursor: pointer;
 }
 
 .navbar-main .subtitle-set {
@@ -25,7 +28,7 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
 }
 
@@ -40,9 +43,16 @@
     cursor: pointer;
 }
 
+.navbar-main .active-link{
+    background: var(--primary-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    cursor: pointer;
+}
+
 .navbar-main .btn {
     padding: 10px 40px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 @media (max-width:990px) {
