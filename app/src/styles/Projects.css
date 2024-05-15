@@ -158,4 +158,8 @@
     .projects-main .card-set {
         padding: 0px 30px;
     }
+
+    .projects-main .language-card{
+        margin-top: 20px;
+    }
 }

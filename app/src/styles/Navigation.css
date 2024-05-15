@@ -60,9 +60,14 @@
         gap: 10px;
     }
     
+    .navbar-main {
+        background: rgba(250, 250, 250, 0.725);
+    }
+
 }
 
 @media (max-width:578px) {
+
     .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
         padding: 0px 30px;
     }
