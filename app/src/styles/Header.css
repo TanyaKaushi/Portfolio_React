@@ -92,13 +92,15 @@
     }
 
     .header-main .header-content .title {
-        font-size: 25px;
+        font-size: 23px;
     }
 
-    .sub-title {
-        font-size: 13px;
-        font-weight: 500;
-        color: var(--light-para-color);
-        margin-top: 10px;
+    .header-main .header-content {
+        width: 80%;
     }
+
+    .header-main .sub-title {
+        font-size: 13px;
+       
+      }
 }
