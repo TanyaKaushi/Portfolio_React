@@ -7,7 +7,6 @@ import { fadeIn } from "../../src/variants.jsx";
 import { motion } from "framer-motion";
 
 const Header = () => {
-
   const onButtonClick = () => {
     const pdfUrl = "cv.pdf";
     const link = document.createElement("a");
@@ -16,7 +15,7 @@ const Header = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-};
+  };
 
   return (
     <section id="header">
@@ -32,14 +31,20 @@ const Header = () => {
             <div className="social-btn-set">
               <div className="btn-div">
                 <button className="social-btn">
-                  <a href="">
+                  <a
+                    href="https://www.facebook.com/tanya.gangegedara"
+                    target="_blank"
+                  >
                     <i class="bi bi-facebook"></i>
                   </a>
                 </button>
               </div>
               <div className="btn-div">
                 <button className="social-btn">
-                  <a href="">
+                  <a
+                    href="https://wa.me/+94717890525?text=Hi%2C%0AI%20would%20like%20to%20know%20more%20about%20you%21"
+                    target="_blank"
+                  >
                     <i class="bi bi-whatsapp"></i>
                   </a>
                 </button>
@@ -71,7 +76,9 @@ const Header = () => {
               endless possibilities with each step.
             </div>
 
-            <button className="btn" onClick={onButtonClick}>Download CV</button>
+            <button className="btn" onClick={onButtonClick}>
+              Download CV
+            </button>
           </div>
         </Card>
       </motion.div>

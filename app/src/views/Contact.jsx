@@ -21,24 +21,27 @@ const Contact = () => {
         <div className="contact-btn-set">
           <div className="btn-div">
             <button className="social-btn">
-              <a href="">
+              <a
+                href="https://www.facebook.com/tanya.gangegedara"
+                target="_blank"
+              >
                 <i class="bi bi-facebook"></i>
               </a>
             </button>
           </div>
           <div className="btn-div">
             <button className="social-btn">
-              <a href="https://wa.me/0717890525?text=I%20like%20to%20know%20more%20about%20you">
+              <a
+                href="https://wa.me/+94717890525?text=Hi%2C%0AI%20would%20like%20to%20know%20more%20about%20you%21"
+                target="_blank"
+              >
                 <i class="bi bi-whatsapp"></i>
               </a>
             </button>
           </div>
           <div className="btn-div">
             <button className="social-btn">
-              <a
-                href="https://www.linkedin.com/in/tanya-gangegedara-64b253204/"
-                target="_blank"
-              >
+              <a href="mailto:tanyakaushi9@gmail.com" target="_blank">
                 <i class="bi bi-envelope"></i>
               </a>
             </button>
