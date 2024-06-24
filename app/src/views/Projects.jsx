@@ -7,6 +7,9 @@ import p3 from "../assets/p3.png";
 import react from "../assets/react.png";
 import next from "../assets/nextjs.png";
 import tailwind from "../assets/tailwind.png";
+import css from "../assets/css.png";
+import js from "../assets/js.png";
+import bootstrap from "../assets/bootstrap.png";
 import redux from "../assets/redux.png";
 import node from "../assets/node.png";
 import express from "../assets/express.png";
@@ -27,17 +30,56 @@ const Projects = () => {
       >
         <div className="main-title">LATESTS PROJECTS</div>
         <div className="card-set">
+          {/* 3 card */}
+          <div>
+            <Card className="card">
+              <img className="image" src={p2} width="350px"></img>
+              {/* <div className="overlay">WEB DESIGN</div> */}
+              <div>
+                <div className="title">TRIPCO - Travel Agent Application</div>
+                <div className="para">
+                  An advanced web application designed to provide extensive
+                  information on distinctive travel destinations, comprehensive
+                  tour details, and a wide array of accommodation options.
+                </div>
+                <div className="button-set">
+                  <a href="https://tripco-travel.vercel.app/" target="_blank">
+                    <button className="social-btn">
+                      <i class="bi bi-laptop"></i>
+                    </button>
+                  </a>
+                  <a
+                    href="https://github.com/TanyaKaushi/travel_app"
+                    target="_blank"
+                  >
+                    <button className="social-btn">
+                      <i class="bi bi-github"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </Card>
+            <Card className="language-card">
+              <div className="image-set">
+                <img className="lan-image" src={react} width="30px"></img>
+                <img className="lan-image" src={js} width="20px"></img>
+                <img className="lan-image" src={css} width="20px"></img>
+                <img className="lan-image" src={bootstrap} width="30px"></img>
+              </div>
+            </Card>
+          </div>
+
           {/* 1 card */}
           <div>
             <Card className="card">
               <img className="image" src={p1} width="350px"></img>
               {/* <div className="overlay">WEB DESIGN</div> */}
               <div>
-                <div className="title">E-commerce Application</div>
+                <div className="title">NIKE - E-commerce Application</div>
                 <div className="para">
-                  Here I have developed the user interface (UI) for the
-                  ecommerce application's website, ensuring a professional and
-                  visually appealing design.
+                  The user interface (UI) for the ecommerce application's
+                  website was developed with a focus on sleek and modern design,
+                  aimed at enhancing usability and captivating users.
                 </div>
                 <div className="button-set">
                   <a
@@ -74,10 +116,11 @@ const Projects = () => {
               <img className="image" src={p3} width="350px"></img>
               {/* <div className="overlay">WEB DESIGN</div> */}
               <div>
-                <div className="title">The Blog - Blog Application</div>
+                <div className="title">THE BLOG - Blog Application</div>
                 <div className="para">
-                  Develop an entire blog application that includes each
-                  essential CRUD (Create, Read, Update, Delete) functions along with filtering function.
+                  Created a complete blog application with basic CRUD (Create,
+                  Read, Update, Delete) functions and a strong filtering system,
+                  demonstrating skills in full-stack web development.
                 </div>
                 <div className="button-set">
                   <a
@@ -106,47 +149,6 @@ const Projects = () => {
                 <img className="lan-image" src={node} width="30px"></img>
                 <img className="lan-image" src={express} width="30px"></img>
                 <img className="lan-image" src={mongo} width="30px"></img>
-              </div>
-            </Card>
-          </div>
-
-          {/* 3 card */}
-          <div>
-            <Card className="card">
-              <img className="image" src={p2} width="350px"></img>
-              {/* <div className="overlay">WEB DESIGN</div> */}
-              <div>
-                <div className="title">Hotely - Hotel Landing Page</div>
-                <div className="para">
-                  The hotel's landing page design highlights modern technology,
-                  fluid animations, and the newest advancements in web
-                  development.
-                </div>
-                <div className="button-set">
-                  <a
-                    href="https://hotel-landing-page-psi.vercel.app/"
-                    target="_blank"
-                  >
-                    <button className="social-btn">
-                      <i class="bi bi-laptop"></i>
-                    </button>
-                  </a>
-                  <a
-                    href="https://github.com/TanyaKaushi/Hotel_Landing_Page"
-                    target="_blank"
-                  >
-                    <button className="social-btn">
-                      <i class="bi bi-github"></i>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </Card>
-            <Card className="language-card">
-              <div className="image-set">
-                <img className="lan-image" src={react} width="30px"></img>
-                <img className="lan-image" src={next} width="30px"></img>
-                <img className="lan-image" src={tailwind} width="30px"></img>
               </div>
             </Card>
           </div>
