@@ -4,6 +4,8 @@ import image from "../assets/test.jpeg";
 import b1 from "../assets/b1.webp";
 import b2 from "../assets/b2.webp";
 import b3 from "../assets/B3.png";
+import b4 from "../assets/B4.webp";
+import b5 from "../assets/B5.png";
 import react from "../assets/react.png";
 import next from "../assets/nextjs.png";
 import tailwind from "../assets/tailwind.png";
@@ -110,6 +112,68 @@ const Blogs = () => {
                   understand how they easily enable communication between
                   components and a few examples with real-world scenarios. Let's
                   dive in and boost your React skills!
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          {/* 4 card */}
+          <div>
+            <Card className="card">
+              <img className="blog-image" src={b4} width="300px"></img>
+              <div className="overlay">
+                <a
+                  href="https://medium.com/@tanyakaushi/understanding-web-storage-cookies-local-storage-session-storage-dbd89ec83001"
+                  target="_blank"
+                >
+                  <button className="social-btn">
+                    <i class="bi bi-bookmark-heart-fill"></i>
+                  </button>
+                </a>
+              </div>
+              <div>
+                <div className="title">
+                  Understanding Web Storage: Cookies, Local Storage & Session
+                  Storage
+                </div>
+                <div className="para">
+                  This article will take an in-depth look at the different
+                  methods for storing data in web applications, including local
+                  storage, session storage, and cookies. Learn how these
+                  techniques are essential for maintaining data and enhancing
+                  the overall user experience on the web.
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          {/* 5 card */}
+          <div>
+            <Card className="card">
+              <img className="blog-image" src={b5} width="300px"></img>
+              <div className="overlay">
+                <a
+                  href="https://medium.com/@tanyakaushi/next-js-essential-basics-for-beginners-1a2cd1eb2025"
+                  target="_blank"
+                >
+                  <button className="social-btn">
+                    <i class="bi bi-bookmark-heart-fill"></i>
+                  </button>
+                </a>
+              </div>
+              <div>
+                <div className="title">
+                  Next.js: Essential Basics for Beginners
+                </div>
+                <div className="para">
+                  This article provides an introduction to Next.js, one of the
+                  most powerful frameworks for building modern web applications.
+                  We’ll explore the core concepts of Next.js, highlighting its
+                  unique features like server-side rendering, static site
+                  generation, and built-in routing. Whether you’re transitioning
+                  from React.js or starting fresh, this article will give you a
+                  solid foundation to understand and leverage the capabilities
+                  of Next.js in your projects.
                 </div>
               </div>
             </Card>
