@@ -4,6 +4,7 @@ import image from "../assets/test.jpeg";
 import p1 from "../assets/P1.png";
 import p2 from "../assets/P2.png";
 import p3 from "../assets/p3.png";
+import p4 from "../assets/P4.png";
 import react from "../assets/react.png";
 import next from "../assets/nextjs.png";
 import tailwind from "../assets/tailwind.png";
@@ -30,6 +31,45 @@ const Projects = () => {
       >
         <div className="main-title">LATESTS PROJECTS</div>
         <div className="card-set">
+          {/* 3 card */}
+          <div>
+            <Card className="card">
+              <img className="image" src={p4} width="350px"></img>
+              {/* <div className="overlay">WEB DESIGN</div> */}
+              <div>
+                <div className="title">TRIPCO - Travel Agent Application</div>
+                <div className="para">
+                  An advanced web application designed to provide extensive
+                  information on distinctive travel destinations, comprehensive
+                  tour details, and a wide array of accommodation options.
+                </div>
+                <div className="button-set">
+                  <a href="https://world-news-woad.vercel.app/" target="_blank">
+                    <button className="social-btn">
+                      <i class="bi bi-laptop"></i>
+                    </button>
+                  </a>
+                  <a
+                    href="https://github.com/TanyaKaushi/news_application"
+                    target="_blank"
+                  >
+                    <button className="social-btn">
+                      <i class="bi bi-github"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </Card>
+            <Card className="language-card">
+              <div className="image-set">
+                <img className="lan-image" src={react} width="30px"></img>
+                <img className="lan-image" src={js} width="20px"></img>
+                <img className="lan-image" src={css} width="20px"></img>
+                <img className="lan-image" src={bootstrap} width="30px"></img>
+              </div>
+            </Card>
+          </div>
+
           {/* 3 card */}
           <div>
             <Card className="card">
