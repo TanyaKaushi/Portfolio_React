@@ -39,11 +39,9 @@ const Projects = () => {
               <div>
                 <div className="title">WORLD NEWS - News Application</div>
                 <div className="para">
-                  An innovative news application designed to keep users informed
-                  with real-time updates, detailed reports, and expert analysis
-                  across a broad spectrum of topics, including global events,
-                  politics, science, sports, and entertainment, all presented
-                  through an intuitive and user-friendly interface.
+                  A modern news application delivering real-time updates,
+                  detailed reports, and expert analysis across a wide range of
+                  topics through an intuitive interface.
                 </div>
                 <div className="button-set">
                   <a href="https://world-news-woad.vercel.app/" target="_blank">
