@@ -37,11 +37,13 @@ const Projects = () => {
               <img className="image" src={p4} width="350px"></img>
               {/* <div className="overlay">WEB DESIGN</div> */}
               <div>
-                <div className="title">TRIPCO - Travel Agent Application</div>
+                <div className="title">WORLD NEWS - News Application</div>
                 <div className="para">
-                  An advanced web application designed to provide extensive
-                  information on distinctive travel destinations, comprehensive
-                  tour details, and a wide array of accommodation options.
+                  An innovative news application designed to keep users informed
+                  with real-time updates, detailed reports, and expert analysis
+                  across a broad spectrum of topics, including global events,
+                  politics, science, sports, and entertainment, all presented
+                  through an intuitive and user-friendly interface.
                 </div>
                 <div className="button-set">
                   <a href="https://world-news-woad.vercel.app/" target="_blank">
