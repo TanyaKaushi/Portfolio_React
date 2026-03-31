@@ -51,20 +51,20 @@
 .heading {
   font-family: $font-display;
   font-size: 58px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.02;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
   color: $txt;
 
   em {
     font-style: italic;
     font-weight: 400;
     color: $txt2;
-    font-size: 35px;
+    font-size: 30px;
     display: block;
     letter-spacing: 1px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   @include desktop   { font-size: 50px; em { font-size: 38px; } }
