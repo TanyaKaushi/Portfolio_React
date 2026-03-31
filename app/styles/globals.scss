@@ -1,0 +1,175 @@
+@import './_variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: $font-body;
+  background: $bg;
+  color: $txt;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a   { text-decoration: none; color: inherit; }
+ul  { list-style: none; }
+img { max-width: 100%; display: block; }
+
+// ─── SCROLL REVEAL ────────────────────────────────────────────────────────────
+// Reset (removing .on) is instant so there's no visible "fade out".
+// Entry (.on added) plays the full animated transition.
+
+.rv {
+  opacity: 0;
+  transform: translateY(24px);
+  // no transition when resetting (class removed)
+  transition: none;
+
+  &.on {
+    opacity: 1;
+    transform: none;
+    // transition only plays when .on is added (entering viewport)
+    transition:
+      opacity  0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+.rv-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: none;
+
+  &.on {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity  0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+.rv-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: none;
+
+  &.on {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity  0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+// Stagger siblings inside a parent — add data-delay="1" data-delay="2" etc.
+// if you want fine-grained control per element
+.rv.on,
+.rv-left.on,
+.rv-right.on {
+  &[data-delay='1'] { transition-delay: 0.1s; }
+  &[data-delay='2'] { transition-delay: 0.2s; }
+  &[data-delay='3'] { transition-delay: 0.3s; }
+  &[data-delay='4'] { transition-delay: 0.4s; }
+}
+
+// ─── SHARED UTILS ─────────────────────────────────────────────────────────────
+.bg-alt { background: $bg2; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+
+  @include tablet { margin-bottom: 32px; gap: 10px; }
+}
+
+.section-tag {
+  font-size: 10px;
+  font-weight: 600;
+  color: $acc;
+  letter-spacing: 0.14em;
+  font-family: $font-mono;
+  background: rgba(124, 106, 255, 0.1);
+  border: 1px solid rgba(124, 106, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.section-title {
+  font-family: $font-display;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: $txt;
+
+  @include tablet-lg { font-size: 28px; }
+  @include mobile    { font-size: 24px; }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 11px;
+}
+
+.tag {
+  @include tag-base;
+}
+
+.btn-primary {
+  background: $acc;
+  color: #fff;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: $font-body;
+  transition: $transition;
+  display: inline-block;
+
+  &:hover {
+    background: #9175ff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(124, 106, 255, 0.4);
+  }
+
+  @include mobile { padding: 10px 18px; font-size: 13px; }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $txt2;
+  border: 1px solid $bdr2;
+  padding: 11px 22px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: $font-body;
+  transition: $transition;
+  display: inline-block;
+
+  &:hover {
+    border-color: $acc;
+    color: $acc2;
+    transform: translateY(-2px);
+  }
+
+  @include mobile { padding: 10px 18px; font-size: 13px; }
+}

@@ -1,0 +1,104 @@
+@import '../../styles/variables';
+
+.section {
+  @include section-pad;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @include desktop   { grid-template-columns: repeat(3, 1fr); }
+  @include tablet-lg { grid-template-columns: repeat(2, 1fr); }
+  @include mobile    { grid-template-columns: 1fr; }
+}
+
+.card {
+  @include surface;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: $transition;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, $acc, $acc3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s;
+  }
+
+  &:hover {
+    border-color: $bdr2;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+
+    &::after  { transform: scaleX(1); }
+    .title    { color: $acc2; }
+    .arrow    { transform: translateX(3px); }
+  }
+
+  @include mobile { padding: 18px; gap: 10px; &:hover { transform: translateY(-2px); } }
+}
+
+.cat {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: $font-mono;
+  padding: 3px 9px;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: $txt;
+  line-height: 1.35;
+  transition: color 0.2s;
+
+  @include mobile { font-size: 15px; }
+}
+
+.desc {
+  color: $txt2;
+  font-size: 12.5px;
+  line-height: 1.6;
+  flex: 1;
+
+  @include mobile { font-size: 12px; }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.date {
+  font-size: 10.5px;
+  color: $txt3;
+  font-family: $font-mono;
+}
+
+.arrow {
+  color: $acc;
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
