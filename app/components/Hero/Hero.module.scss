@@ -70,7 +70,7 @@
   @include desktop   { font-size: 50px; em { font-size: 38px; } }
   @include tablet-lg { font-size: 46px; em { font-size: 34px; } }
   @include tablet    { font-size: 38px; em { font-size: 29px; } }
-  @include mobile    { font-size: 32px; letter-spacing: -1.5px; em { font-size: 25px; } }
+  @include mobile    { font-size: 40px; letter-spacing: -1px; em { font-size: 25px; } }
 }
 
 .desc {
