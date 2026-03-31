@@ -1,16 +1,11 @@
 import Image from "next/image";
 import styles from "./Projects.module.scss";
 
-import project1 from "../../public/assets/P1.png";
-import project2 from "../../public/assets/P2.png";
-import project3 from "../../public/assets/P3.png";
-import project4 from "../../public/assets/P4.png";
-
-export const images = {
-  project1,
-  project2,
-  project3,
-  project4,
+const images = {
+  project1: "/assets/P1.png",
+  project2: "/assets/P2.png",
+  project3: "/assets/P3.png",
+  project4: "/assets/P4.png",
 };
 
 const PROJECTS = [

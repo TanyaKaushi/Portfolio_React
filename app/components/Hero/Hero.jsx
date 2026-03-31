@@ -46,7 +46,7 @@ export default function Hero() {
           </a>
           
           <a
-            href="/doc/Tanya_Gangegedara.pdf"
+            href="/assets/Tanya_Gangegedara.pdf"
             download
             className={`${styles.btnOutline} btn-outline`}
           >
