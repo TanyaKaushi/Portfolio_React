@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.footer {
+  border-top: 1px solid $bdr;
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $txt3;
+  font-size: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  @include desktop   { padding: 22px 36px; }
+  @include tablet-lg { padding: 20px 28px; }
+  @include tablet    { padding: 18px 20px; font-size: 11.5px; flex-direction: column; text-align: center; }
+  @include mobile    { padding: 16px; }
+}
+
+.stack {
+  font-family: $font-mono;
+  font-size: 10.5px;
+  color: $txt3;
+}

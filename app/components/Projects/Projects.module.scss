@@ -1,0 +1,155 @@
+@import '../../styles/variables';
+
+.wrapper { background: $bg2; }
+
+.section {
+  @include section-pad;
+  background: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include tablet-lg { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @include tablet    { grid-template-columns: 1fr; gap: 16px; }
+}
+
+// ── CARD ─────────────────────────────────────────────────────────────────────
+.card {
+  @include surface;
+  overflow: hidden;
+  transition: $transition;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(124, 106, 255, 0.06), transparent);
+    opacity: 0;
+    transition: opacity 0.35s;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &:hover {
+    border-color: rgba(124, 106, 255, 0.45);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(124, 106, 255, 0.15);
+
+    &::before { opacity: 1; }
+    .thumbImg { transform: scale(1.06); }
+  }
+
+  @include mobile { &:hover { transform: translateY(-2px); } }
+}
+
+// ── IMAGE THUMBNAIL ───────────────────────────────────────────────────────────
+.thumbWrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @include desktop   { height: 185px; }
+  @include tablet-lg { height: 180px; }
+  @include tablet    { height: 220px; }
+  @include mobile    { height: 180px; }
+}
+
+.thumbImg {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.thumbOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 8, 15, 0.15) 0%,
+    rgba(8, 8, 15, 0.55) 100%
+  );
+  z-index: 1;
+}
+
+.statusBadge {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  z-index: 2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  font-family: $font-mono;
+  background: rgba(8, 8, 15, 0.72);
+  backdrop-filter: blur(6px);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+// ── BODY ─────────────────────────────────────────────────────────────────────
+.body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  @include mobile { padding: 14px 16px 16px; }
+}
+
+.name {
+  font-family: $font-display;
+  font-size: 17px;
+  font-weight: 700;
+  color: $txt;
+  margin-bottom: 8px;
+  line-height: 1.25;
+
+  @include mobile { font-size: 16px; }
+}
+
+.desc {
+  color: $txt2;
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  flex: 1;
+
+  @include mobile { font-size: 12px; }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.link {
+  color: $acc;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: $transition;
+  white-space: nowrap;
+  &:hover { color: $acc2; letter-spacing: 0.02em; }
+}
+
+.linkPlain {
+  color: $txt3;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: $font-mono;
+  white-space: nowrap;
+}

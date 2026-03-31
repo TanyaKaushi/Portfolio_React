@@ -1,0 +1,148 @@
+@import '../../styles/variables';
+
+.section {
+  @include section-pad;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 28px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, $acc, $bdr 80%, transparent);
+  }
+
+  @include mobile { padding-left: 20px; }
+}
+
+.item {
+  position: relative;
+  margin-bottom: 30px;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.dot {
+  position: absolute;
+  left: -34px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid $bg;
+
+  @include mobile { left: -26px; width: 10px; height: 10px; }
+}
+
+.card {
+  @include surface;
+  padding: 20px 24px;
+  transition: $transition;
+
+  &:hover {
+    border-color: rgba(124, 106, 255, 0.3);
+    transform: translateX(4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  @include tablet  { padding: 16px 18px; }
+  @include mobile  { padding: 14px 16px; &:hover { transform: none; } }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 9px;
+}
+
+.date {
+  font-size: 10.5px;
+  font-weight: 600;
+  font-family: $font-mono;
+  padding: 3px 10px;
+  border-radius: 6px;
+
+  @include mobile { font-size: 10px; }
+}
+
+.type {
+  font-size: 10px;
+  color: $txt3;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.role {
+  font-family: $font-display;
+  font-size: 18px;
+  font-weight: 700;
+  color: $txt;
+  margin-bottom: 2px;
+
+  @include tablet  { font-size: 16px; }
+  @include mobile  { font-size: 15px; }
+}
+
+.company {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 9px;
+
+  @include mobile { font-size: 12px; }
+}
+
+.companyLink {
+  font-size: 11px;
+  margin-left: 6px;
+  opacity: 0.75;
+  text-decoration: none;
+  color: inherit;
+  &:hover { opacity: 1; }
+}
+
+.points {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 5px;
+    color: $txt2;
+    font-size: 13px;
+    line-height: 1.6;
+
+    &::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: $acc;
+      font-weight: 700;
+    }
+
+    @include mobile { font-size: 12.5px; }
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.chip {
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 10px;
+  font-family: $font-mono;
+  font-weight: 500;
+}

@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Tanya Gangegedara — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built with **Next.js 14 (App Router)** + **SCSS Modules**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📁 Project Structure
 
-### `npm start`
+```
+tanya-portfolio/
+├── app/
+│   ├── layout.jsx          ← Root layout + global styles
+│   └── page.jsx            ← Assembles all sections
+│
+├── components/
+│   ├── Navbar/
+│   │   ├── Navbar.jsx
+│   │   └── Navbar.module.scss
+│   ├── Hero/
+│   │   ├── Hero.jsx
+│   │   └── Hero.module.scss
+│   ├── Stats/
+│   │   ├── Stats.jsx
+│   │   └── Stats.module.scss
+│   ├── About/
+│   │   ├── About.jsx
+│   │   └── About.module.scss
+│   ├── Skills/
+│   │   ├── Skills.jsx        ← Animated progress bars
+│   │   └── Skills.module.scss
+│   ├── Experience/
+│   │   ├── Experience.jsx    ← Colour-coded timeline
+│   │   └── Experience.module.scss
+│   ├── Projects/
+│   │   ├── Projects.jsx
+│   │   └── Projects.module.scss
+│   ├── Blogs/
+│   │   ├── Blogs.jsx
+│   │   └── Blogs.module.scss
+│   ├── Education/
+│   │   ├── Education.jsx
+│   │   └── Education.module.scss
+│   ├── Contact/
+│   │   ├── Contact.jsx       ← EmailJS + mailto fallback
+│   │   └── Contact.module.scss
+│   ├── Footer/
+│   │   ├── Footer.jsx
+│   │   └── Footer.module.scss
+│   └── ScrollRevealInit.jsx  ← Global scroll animations
+│
+└── styles/
+    ├── _variables.scss       ← All tokens, mixins, keyframes
+    └── globals.scss          ← CSS reset + shared utility classes
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+### 1. Install dependencies
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Set up EmailJS (for the contact form)
 
-### `npm run build`
+1. Sign up free at [emailjs.com](https://www.emailjs.com)
+2. Create a **Gmail service** → copy the **Service ID**
+3. Create an **Email Template** with these variables:
+   - `{{from_name}}` — sender's name
+   - `{{from_email}}` — sender's email
+   - `{{subject}}` — subject line
+   - `{{message}}` — message body
+4. Copy your **Template ID** and **Public Key** (Account → API Keys)
+5. Open `components/Contact/Contact.jsx` and replace:
+   ```js
+   const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+   const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+   const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> **Without EmailJS keys** the form still works — it falls back to opening your default email client with the message pre-filled.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Run locally
+```bash
+npm run dev
+# → http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Deploy to Vercel
+```bash
+# Install Vercel CLI if needed
+npm i -g vercel
 
-### `npm run eject`
+vercel
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎨 Customisation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+All design tokens (colours, fonts, spacing, animations) live in:
+```
+styles/_variables.scss
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To update your content, edit the data arrays at the top of each component file — no JSX changes needed.
