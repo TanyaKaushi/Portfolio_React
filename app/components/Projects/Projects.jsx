@@ -4,13 +4,13 @@ import styles from "./Projects.module.scss";
 const images = {
   project1: "/assets/P1.png",
   project2: "/assets/P2.png",
-  project3: "/assets/P3.png",
+  project3: "/assets/p3.png",
   project4: "/assets/P4.png",
 };
 
 const PROJECTS = [
   {
-    img: images.project1,
+    img: images.project4,
     imgAlt: "Project 1 image",
     status: "● LIVE",
     statusColor: "#4ade80",
@@ -32,7 +32,7 @@ const PROJECTS = [
     linkLabel: "Visit ↗",
   },
   {
-    img: images.project3,
+    img: images.project1,
     imgAlt: "Project 3 image",
     status: "● LIVE",
     statusColor: "#4ade80",
@@ -43,7 +43,7 @@ const PROJECTS = [
     linkLabel: "Visit ↗",
   },
   {
-    img: images.project4,
+    img: images.project3,
     imgAlt: "Project 4 image",
     statusColor: "#4ade80",
     name: "THE BLOG - Blog Application",
